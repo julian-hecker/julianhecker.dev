@@ -36,7 +36,7 @@ const footerLinks = [
             },
             {
                 text: 'Portfolio',
-                href: '/portfolio',
+                href: '/projects',
                 desc: 'View my projects',
             },
             {

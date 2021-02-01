@@ -1,7 +1,6 @@
 import React from 'react';
-import Cover from '../layouts/Cover';
 
-import Layout from '../layouts/Layout';
+import { Layout, Cover } from '../layouts';
 
 function Blog() {
     return (

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Layout from '../layouts/Layout';
-import Cover from '../layouts/Cover';
+import { Layout, Cover } from '../layouts';
 
 function Projects() {
     return (

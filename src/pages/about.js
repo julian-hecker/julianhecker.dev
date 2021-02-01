@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Layout from '../layouts/Layout';
-import Cover from '../layouts/Cover';
-import Article from '../layouts/Article';
+import { Layout, Cover, Article } from '../layouts';
 
 function About() {
     return (

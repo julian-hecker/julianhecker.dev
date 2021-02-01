@@ -13,17 +13,22 @@
         margin-bottom: 0.25em;
     }
     p {
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
+        color: #333333;
     }
 
     a {
         display: inline-block;
-        margin-right: 1em;
+        margin-top: 0.5em;
         padding: 0.25em 0.75em;
         background-color: #5200ff;
         color: white;
         text-decoration: none;
         transition: opacity 0.25s;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
 
         &:hover {
             opacity: 0.75;

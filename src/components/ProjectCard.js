@@ -13,27 +13,27 @@ function ProjectCard({ image, title, desc, buttons }) {
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 {buttons
-                    ? buttons.map((button) => (
+                    ? buttons.map(({ href, icon, text }) => (
                           <>
-                              {button.href[0] === '/' ? (
-                                  <Link to={button.href}>
-                                      {button.icon ? (
+                              {href[0] === '/' ? (
+                                  <Link to={href}>
+                                      {icon ? (
                                           <img
-                                              src={button.icon}
-                                              alt={`${button.text} icon`}
+                                              src={icon}
+                                              alt={`${text} icon`}
                                           />
                                       ) : null}
-                                      {button.text}
+                                      {text}
                                   </Link>
                               ) : (
-                                  <a href={button.href}>
-                                      {button.icon ? (
+                                  <a href={href}>
+                                      {icon ? (
                                           <img
-                                              src={button.icon}
-                                              alt={`${button.text} icon`}
+                                              src={icon}
+                                              alt={`${text} icon`}
                                           />
                                       ) : null}
-                                      {button.text}
+                                      {text}
                                   </a>
                               )}
                           </>

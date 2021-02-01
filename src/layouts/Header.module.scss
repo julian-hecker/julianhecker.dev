@@ -6,10 +6,12 @@
     z-index: 1;
     padding: 16px 0;
     background-color: transparent;
-    color: #cccccc;
+    color: #dddddd;
     font-family: 'Roboto Mono', Courier, monospace;
+    text-shadow: 0 2px 4px #0004;
 
-    & > div { // Container
+    & > div {
+        // Container
         display: flex;
         justify-content: space-between;
         align-items: center;

@@ -3,6 +3,17 @@ import Container from '../../layouts/Container';
 
 import s from './Contact.module.scss';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) +
+                '=' +
+                encodeURIComponent(data[key]),
+        )
+        .join('&');
+};
+
 function Contact() {
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
@@ -14,7 +25,10 @@ function Contact() {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: { name, message, email },
+            body: encode({
+                'form-name': 'contact',
+                ...{ name, message, email },
+            }),
         })
             .then(() => alert('success'))
             .catch((err) => alert(err));

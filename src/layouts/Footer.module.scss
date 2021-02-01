@@ -1,0 +1,48 @@
+.footer {
+    padding: 64px 0;
+    background-color: #112233;
+    color: #cccccc;
+}
+.column {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2rem;
+    gap: 2rem;
+}
+
+.category {
+    h3 {
+        font-family: 'Roboto Mono';
+        font-size: 32px;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        margin-bottom: 1em;
+    }
+}
+
+.link {
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover,
+    &:active {
+        color: gold;
+    }
+    &Desc {
+        font-weight: lighter;
+    }
+    &Icon {
+        height: 0.8em;
+        margin-right: 0.5em;
+    }
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../styles/index.scss';
 import resume from '../assets/Julian_Hecker_Developer.pdf';
 
 function Resume() {

@@ -1,0 +1,47 @@
+.contact {
+    padding: 64px 0;
+    h2 {
+        font-family: 'Roboto Mono', monospace;
+    }
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+    padding-top: 32px;
+}
+
+.contactForm {
+    label {
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 8px;
+        font-weight: bolder;
+    }
+
+    input,
+    textarea {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        background-color: #eeeeee;
+        border-radius: 8px;
+        border: 1px solid #3334;
+        font-family: 'Roboto', sans-serif;
+    }
+    textarea {
+        resize: none;
+        min-height: 8em;
+    }
+    input[type='submit'] {
+        max-width: min-content;
+        background-color: #5200ff;
+        border-radius: 0;
+        border: none;
+        color: white;
+        // font-size: 1.25em;
+        font-weight: bolder;
+    }
+}

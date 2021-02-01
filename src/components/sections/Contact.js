@@ -20,6 +20,12 @@ function Contact() {
     const [email, setEmail] = useState('');
 
     const handleSubmit = (e) => {
+        console.log(
+            encode({
+                'form-name': 'contact',
+                ...{ name, message, email },
+            }),
+        );
         fetch('/', {
             method: 'POST',
             headers: {

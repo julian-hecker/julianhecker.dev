@@ -11,7 +11,7 @@ function ProjectCard({ image, title, desc, buttons }) {
             </div>
             <div className={s.content}>
                 <h3>{title}</h3>
-                <p>{desc}</p>
+                {desc}
                 {buttons
                     ? buttons.map(({ href, icon, text }) => (
                           <>

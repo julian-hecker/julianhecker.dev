@@ -94,45 +94,45 @@ const Footer = () => (
     <footer className={s.footer}>
         <Container>
             <div className={s.column}>
-                {footerLinks.map((category) => (
-                    <nav className={s.category}>
+                {footerLinks.map(({category, links}) => (
+                    <nav className={s.category} key={category}>
                         <h3 className={s.categoryTitle}>
-                            {category.category}
+                            {category}
                         </h3>
                         <ul>
-                            {category.links.map((link) => (
-                                <li>
-                                    {!link.target ? (
+                            {links.map(({href, text, desc, icon, target}) => (
+                                <li key={text}>
+                                    {!target ? (
                                         <Link
-                                            to={link.href}
+                                            to={href}
                                             className={s.link}
                                         >
-                                            {link.text}
+                                            {text}
                                         </Link>
                                     ) : (
                                         <a
-                                            href={link.href}
+                                            href={href}
                                             className={s.link}
-                                            target={link.target}
+                                            target={target}
                                             rel="noreferrer"
-                                            noopener
+                                            noopener="true"
                                         >
-                                            {link.icon ? (
+                                            {icon ? (
                                                 <img
                                                     className={
                                                         s.linkIcon
                                                     }
-                                                    src={link.icon}
-                                                    alt={`${link.text} icon`}
+                                                    src={icon}
+                                                    alt={`${text} icon`}
                                                 />
                                             ) : (
                                                 ''
                                             )}
-                                            {link.text}
+                                            {text}
                                         </a>
                                     )}
                                     <p className={s.linkDesc}>
-                                        {link.desc}
+                                        {desc}
                                     </p>
                                 </li>
                             ))}

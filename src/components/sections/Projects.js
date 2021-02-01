@@ -44,7 +44,7 @@ const projects = [
     },
     {
         image: require('../../assets/covid.png'),
-        title: 'Visionary CEO',
+        title: 'Corona Times',
         desc: (
             <>
                 <p>
@@ -79,7 +79,7 @@ const projects = [
     },
     {
         image: require('../../assets/covid.png'),
-        title: 'Visionary CEO',
+        title: 'Pax Paws',
         desc: (
             <>
                 <p>
@@ -114,7 +114,7 @@ const projects = [
     },
     {
         image: require('../../assets/covid.png'),
-        title: 'Visionary CEO',
+        title: 'Safe Distance',
         desc: (
             <>
                 <p>
@@ -163,6 +163,7 @@ const Projects = () => (
                         title={title}
                         desc={desc}
                         buttons={buttons}
+                        key={title}
                     />
                 ))}
             </div>

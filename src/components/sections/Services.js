@@ -147,7 +147,7 @@ const Services = () => (
             </h2>
             <div className={s.columns}>
                 {serviceContent.map(({ heading, text, icon }) => (
-                    <div className={s.service}>
+                    <div className={s.service} key={heading}>
                         <img src={icon} alt={`${heading} icon`} />
                         <h3>{heading}</h3>
                         {text}
@@ -155,11 +155,12 @@ const Services = () => (
                 ))}
             </div>
             <div className={s.icons}>
-                {icons.map((icon) => (
+                {icons.map(({ icon, text }) => (
                     <img
                         className={s.icon}
-                        src={icon.icon}
-                        alt={`${icon.text}`}
+                        src={icon}
+                        alt={`${text}`}
+                        key={text}
                     />
                 ))}
             </div>

@@ -50,23 +50,23 @@ const Header = () => (
                 {branding.text}
             </Link>
             <nav className={s.navLinks}>
-                {headerLinks.map((link) => (
+                {headerLinks.map(({ href, text, target }) => (
                     <>
-                        {!link.target ? (
+                        {!target ? (
                             <Link
-                                to={link.href}
+                                to={href}
                                 className={s.navLink}
                                 activeClassName={s.active}
                             >
-                                {link.text}
+                                {text}
                             </Link>
                         ) : (
                             <a
-                                href={link.href}
+                                href={href}
                                 className={s.navLink}
-                                target={link.target}
+                                target={target}
                             >
-                                {link.text}
+                                {text}
                             </a>
                         )}
                     </>

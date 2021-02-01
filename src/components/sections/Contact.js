@@ -15,32 +15,29 @@ const encode = (data) => {
 };
 
 function Contact() {
-    const [name, setName] = useState('');
-    const [message, setMessage] = useState('');
-    const [email, setEmail] = useState('');
+    const [state, setState] = useState({});
+
+    const handleChange = (e) => {
+        setState({ ...state, [e.target.name]: e.target.value });
+    };
 
     const handleSubmit = (e) => {
-        console.log(
-            encode({
-                'form-name': 'contact',
-                ...{ name, message, email },
-            }),
-        );
+        e.preventDefault();
+        const form = e.target;
         fetch('/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: encode({
-                'form-name': 'contact',
-                ...{ name, message, email },
+                'form-name': form.getAttribute('name'),
+                ...state,
             }),
         })
-            .then(() => alert('success'))
-            .catch((err) => alert(err));
-
-        e.preventDefault();
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
     };
+
     return (
         <section className={s.contact}>
             <Container>
@@ -57,6 +54,10 @@ function Contact() {
                             my questions three.
                         </p>
                         <form
+                            name="contact"
+                            method="post"
+                            // action="/"
+                            data-netlify="true"
                             className={s.contactForm}
                             onSubmit={handleSubmit}
                         >
@@ -69,10 +70,7 @@ function Contact() {
                                 type="text"
                                 placeholder="Sir Lancelot of Camelot"
                                 required
-                                value={name}
-                                onChange={(e) =>
-                                    setName(e.target.value)
-                                }
+                                onChange={handleChange}
                             />
                             <label htmlFor="messageInput">
                                 What is your request?
@@ -82,10 +80,7 @@ function Contact() {
                                 id="messageInput"
                                 placeholder="I seek the Holy Grail!"
                                 required
-                                value={message}
-                                onChange={(e) =>
-                                    setMessage(e.target.value)
-                                }
+                                onChange={handleChange}
                             ></textarea>
                             <label htmlFor="emailInput">
                                 What is your electronic mail address?
@@ -96,10 +91,7 @@ function Contact() {
                                 type="email"
                                 placeholder="sirlancelot@roundtable.co"
                                 required
-                                value={email}
-                                onChange={(e) =>
-                                    setEmail(e.target.value)
-                                }
+                                onChange={handleChange}
                             />
                             <input type="submit" value="Proceed" />
                         </form>

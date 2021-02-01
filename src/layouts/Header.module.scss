@@ -1,11 +1,11 @@
 .header {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
     padding: 16px 0;
     background-color: transparent;
-    background-color: rgba(0, 0, 0, 0.5);
     color: #cccccc;
     font-family: 'Roboto Mono', Courier, monospace;
 

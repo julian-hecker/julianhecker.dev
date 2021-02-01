@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import s from './CTA.module.scss';
 
-const CTA = ({ children, href, bg, color }) => (
-    <Link
+const CTA = ({ children, href, bg, color, target }) => (
+    <a
         className={s.cta}
         style={{
-            backgroundColor: bg,
-            color: color,
+            backgroundColor: bg ? bg : 'white',
+            color: color ? color : 'black',
         }}
-        to={href}
+        href={href}
+        target={target ? target : '_self'}
     >
         {children}
-    </Link>
+    </a>
 );
 
 export default CTA;

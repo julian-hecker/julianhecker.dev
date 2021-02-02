@@ -30,7 +30,7 @@ const headerLinks = [
     },
     {
         text: 'Contact',
-        href: '/contact',
+        href: '/#contact',
     },
     {
         text: 'Resume',
@@ -39,8 +39,12 @@ const headerLinks = [
     },
 ];
 
+const toggleMenu = (e) => {
+
+}
+
 const Header = () => (
-    <header className={s.header}>
+    <header className={s.header} id="header">
         <Container>
             <Link
                 to={branding.href}
@@ -72,6 +76,11 @@ const Header = () => (
                     </>
                 ))}
             </nav>
+            <div className={s.button} onClick={toggleMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </Container>
     </header>
 );

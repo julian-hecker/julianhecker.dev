@@ -7,9 +7,12 @@
 
 .columns {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 32px;
     padding-top: 32px;
+    p {
+        margin-bottom: 8px;
+    }
 }
 
 .contactForm {

@@ -7,7 +7,7 @@
 }
 .column {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 2rem;
     gap: 2rem;
 }

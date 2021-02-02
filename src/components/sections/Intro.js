@@ -7,9 +7,9 @@ import s from './Intro.module.scss';
 
 function Intro() {
     return (
-        <section className={s.intro}>
+        <section className={s.intro} id="intro">
             <Container>
-                <h2>It's great to see you!</h2>
+                <h2>It's great to meet you!</h2>
                 <p>
                     I’ve been diving deep into web technologies for
                     the past half a decade since I made my first site.

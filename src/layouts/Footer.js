@@ -33,17 +33,17 @@ const footerLinks = [
             },
             {
                 text: 'Portfolio',
-                href: '/projects',
+                href: '/#projects',
                 desc: 'View my projects',
             },
-            {
-                text: 'Blog',
-                href: '/blog',
-                desc: 'My articles about web development',
-            },
+            // {
+            //     text: 'Blog',
+            //     href: '/blog',
+            //     desc: 'My articles about web development',
+            // },
             {
                 text: 'Contact',
-                href: '/contact',
+                href: '/#contact',
                 desc: 'Send me a message',
             },
             {
@@ -91,7 +91,7 @@ const footerLinks = [
 ];
 
 const Footer = () => (
-    <footer className={s.footer}>
+    <footer className={s.footer} id="footer">
         <Container>
             <div className={s.column}>
                 {footerLinks.map(({category, links}) => (

@@ -24,10 +24,10 @@ const headerLinks = [
         text: 'Projects',
         href: '/projects',
     },
-    {
-        text: 'Blog',
-        href: '/blog',
-    },
+    // {
+    //     text: 'Blog',
+    //     href: '/blog',
+    // },
     {
         text: 'Contact',
         href: '/#contact',

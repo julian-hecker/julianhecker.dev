@@ -5,6 +5,13 @@ import s from './Sunset.module.scss';
 import { Container } from '../../layouts';
 import CTA from '../CTA';
 
+import {
+    mountain1,
+    mountain2,
+    mountain3,
+    mountain4
+} from '../../images'
+
 const Sunset = () => (
     <section className={s.sunset} id="sunset">
         <ParallaxProvider>
@@ -14,19 +21,19 @@ const Sunset = () => (
                 </div>
                 <Parallax className={s.mountain} y={[-25, -75]}>
                     <img
-                        src={require('../../assets/mountain-1.svg')}
+                        src={mountain1}
                         alt=""
                     />
                 </Parallax>
                 <Parallax className={s.mountain} y={[75, -150]}>
                     <img
-                        src={require('../../assets/mountain-2.svg')}
+                        src={mountain2}
                         alt=""
                     />
                 </Parallax>
                 <Parallax className={s.mountain} y={[150, -300]}>
                     <img
-                        src={require('../../assets/mountain-3.svg')}
+                        src={mountain3}
                         alt=""
                     />
                 </Parallax>
@@ -36,7 +43,7 @@ const Sunset = () => (
                     y={[300, -1000]}
                 >
                     <img
-                        src={require('../../assets/mountain-4.svg')}
+                        src={mountain4}
                         alt=""
                     />
                     <div

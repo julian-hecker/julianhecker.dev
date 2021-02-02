@@ -140,7 +140,7 @@ const icons = [
 ];
 
 const Services = () => (
-    <section className={s.services}>
+    <section className={s.services} id="services">
         <Container>
             <h2 className={s.heading}>
                 But what do you even do, Julian?

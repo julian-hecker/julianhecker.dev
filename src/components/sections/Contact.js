@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Container from '../../layouts/Container';
 
 import s from './Contact.module.scss';
+import { ny } from '../../images';
+
 
 const encode = (data) => {
     return Object.keys(data)
@@ -39,7 +41,7 @@ function Contact() {
     };
 
     return (
-        <section className={s.contact}>
+        <section className={s.contact} id="contact">
             <Container>
                 <h2>Want to get in touch?</h2>
                 <p>
@@ -103,6 +105,7 @@ function Contact() {
                             great New York State. I wouldn't mind
                             leaving though.
                         </p>
+                        <img src={ny} alt="New York State"/>
                     </div>
                 </div>
             </Container>

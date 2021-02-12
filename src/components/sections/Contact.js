@@ -4,7 +4,7 @@ import Container from '../../layouts/Container';
 import s from './Contact.module.scss';
 import { ny } from '../../images';
 
-
+// Used for Netlify Form Submission
 const encode = (data) => {
     return Object.keys(data)
         .map(
@@ -17,7 +17,11 @@ const encode = (data) => {
 };
 
 function Contact() {
-    const [state, setState] = useState({});
+    const [state, setState] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -25,6 +29,7 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setState({ ...state, status: false });
         const form = e.target;
         fetch('/', {
             method: 'POST',
@@ -36,9 +41,44 @@ function Contact() {
                 ...state,
             }),
         })
-            .then((res) => console.log(res))
-            .catch((err) => console.log(err));
+            .then((res) => {
+                console.log(res);
+                submissionFeedback({ failed: false });
+            })
+            .catch((err) => {
+                submissionFeedback({
+                    failed: true,
+                    message: err,
+                });
+                console.error(err);
+            });
     };
+
+    const submissionFeedback = (status) => {
+        setState({
+            name: '',
+            email: '',
+            message: '',
+            status,
+        });
+    };
+
+    const FeedbackAlert = ({ status }) => (
+        <div
+            style={{
+                backgroundColor: status.failed
+                    ? 'rgb(255, 192, 192)'
+                    : 'rgb(192, 255, 192)',
+                padding: '0.5em 1em',
+                color: '#555',
+                fontSize: '0.9em',
+            }}
+        >
+            {status.failed
+                ? 'Message failed to send: ' + status.message
+                : 'Your contact request has been sent successfully!'}
+        </div>
+    );
 
     return (
         <section className={s.contact} id="contact">
@@ -58,7 +98,7 @@ function Contact() {
                         <form
                             name="contact"
                             method="post"
-                            // action="/"
+                            action="/"
                             data-netlify="true"
                             className={s.contactForm}
                             onSubmit={handleSubmit}
@@ -70,6 +110,7 @@ function Contact() {
                                 name="name"
                                 id="nameInput"
                                 type="text"
+                                value={state.name}
                                 placeholder="Sir Lancelot of Camelot"
                                 required
                                 onChange={handleChange}
@@ -80,6 +121,7 @@ function Contact() {
                             <textarea
                                 name="message"
                                 id="messageInput"
+                                value={state.message}
                                 placeholder="I seek the Holy Grail!"
                                 required
                                 onChange={handleChange}
@@ -91,11 +133,17 @@ function Contact() {
                                 name="email"
                                 id="emailInput"
                                 type="email"
+                                value={state.email}
                                 placeholder="sirlancelot@roundtable.co"
                                 required
                                 onChange={handleChange}
                             />
                             <input type="submit" value="Proceed" />
+                            {state.status ? (
+                                <FeedbackAlert
+                                    status={state.status}
+                                />
+                            ) : null}
                         </form>
                     </div>
                     <div className={s.column}>
@@ -105,7 +153,7 @@ function Contact() {
                             great New York State. I wouldn't mind
                             leaving though.
                         </p>
-                        <img src={ny} alt="New York State"/>
+                        <img src={ny} alt="New York State" />
                     </div>
                 </div>
             </Container>

@@ -39,10 +39,6 @@ const headerLinks = [
     },
 ];
 
-const toggleMenu = (e) => {
-
-}
-
 const Header = () => (
     <header className={s.header} id="header">
         <Container>
@@ -76,11 +72,6 @@ const Header = () => (
                     </>
                 ))}
             </nav>
-            <div className={s.button} onClick={toggleMenu}>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
         </Container>
     </header>
 );

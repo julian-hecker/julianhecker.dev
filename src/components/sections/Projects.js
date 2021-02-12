@@ -99,12 +99,12 @@ const projects = [
         ),
         buttons: [
             {
-                href: 'https://visionary-ceo.netlify.app/',
+                href: 'https://paxpawspets.com',
                 icon: link,
                 text: 'Demo',
             },
             {
-                href: 'https://github.com/julian-hecker',
+                href: 'https://github.com/julian-hecker/PaxPaws',
                 icon: github,
                 text: 'Repo',
             },
@@ -140,7 +140,7 @@ const projects = [
                 text: 'Demo',
             },
             {
-                href: 'https://devpost.com/software/safe-distance',
+                href: 'https://github.com/mnai01/HackHR-Webapp',
                 icon: github,
                 text: 'Repo',
             },
@@ -171,6 +171,25 @@ const Projects = () => (
                     />
                 ))}
             </div>
+            <p>
+                Check out my other projects on my{' '}
+                <a
+                    href="https://github.com/julian-hecker"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    GitHub
+                </a>{' '}
+                or{' '}
+                <a
+                    href="https://devpost.com/julian-hecker"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Devpost
+                </a>
+                !
+            </p>
         </Container>
     </section>
 );

@@ -22,7 +22,7 @@ const headerLinks = [
     },
     {
         text: 'Projects',
-        href: '/projects',
+        href: '/#projects',
     },
     // {
     //     text: 'Blog',

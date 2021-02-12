@@ -14,4 +14,9 @@
         color: #dddddd;
         font-size: 1.5rem;
     }
+
+    // Matches with collapsing header
+    @media (max-width: 800px) {
+        padding-top: 160px;
+    }
 }

@@ -2,15 +2,14 @@ import React from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 
 import s from './Sunset.module.scss';
-import { Container } from '../../layouts';
 import CTA from '../CTA';
 
 import {
     mountain1,
     mountain2,
     mountain3,
-    mountain4
-} from '../../images'
+    mountain4,
+} from '../../images';
 
 const Sunset = () => (
     <section className={s.sunset} id="sunset">
@@ -20,32 +19,47 @@ const Sunset = () => (
                     <div className={s.sun}></div>
                 </div>
                 <Parallax className={s.mountain} y={[-25, -75]}>
-                    <img
-                        src={mountain1}
-                        alt=""
-                    />
+                    <img src={mountain1} alt="" />
+                    <div
+                        style={{
+                            backgroundColor: '#445566',
+                            height: '100vh',
+                            position: 'absolute',
+                            top: '99%',
+                            width: '100%',
+                        }}
+                    ></div>
                 </Parallax>
                 <Parallax className={s.mountain} y={[75, -150]}>
-                    <img
-                        src={mountain2}
-                        alt=""
-                    />
+                    <img src={mountain2} alt="" />
+                    <div
+                        style={{
+                            backgroundColor: '#334455',
+                            height: '100vh',
+                            position: 'absolute',
+                            top: '99%',
+                            width: '100%',
+                        }}
+                    ></div>
                 </Parallax>
                 <Parallax className={s.mountain} y={[150, -300]}>
-                    <img
-                        src={mountain3}
-                        alt=""
-                    />
+                    <img src={mountain3} alt="" />
+                    <div
+                        style={{
+                            backgroundColor: '#223344',
+                            height: '100vh',
+                            position: 'absolute',
+                            top: '99%',
+                            width: '100%',
+                        }}
+                    ></div>
                 </Parallax>
                 <Parallax
                     className={s.mountain}
                     style={{ position: 'relative' }}
                     y={[300, -1000]}
                 >
-                    <img
-                        src={mountain4}
-                        alt=""
-                    />
+                    <img src={mountain4} alt="" />
                     <div
                         style={{
                             backgroundColor: '#112233',
@@ -59,18 +73,19 @@ const Sunset = () => (
             </div>
         </ParallaxProvider>
         <div className={s.content}>
-            <Container>
-                <h1>
-                    Full Stack Developer
-                    <br />
-                    and Coding Mentor,
-                    <br />
-                    <strong>Julian Hecker</strong>
-                </h1>
-                <CTA bg="#fff" color="#5200ff" href="/#projects">
-                    View Projects
-                </CTA>
-            </Container>
+            <h1>
+                Full Stack Developer
+                <br />
+                and Coding Mentor,
+                <br />
+                <strong>Julian Hecker</strong>
+            </h1>
+            <CTA bg="#fff" color="#5200ff" href="/#projects">
+                View Projects
+            </CTA>
+            <CTA bg="#5200ff" color="#fff" href="/about">
+                About me
+            </CTA>
         </div>
     </section>
 );

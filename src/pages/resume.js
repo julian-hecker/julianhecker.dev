@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/index.scss';
-import resume from '../assets/Julian_Hecker_Resume_June.pdf';
+import "../styles/index.scss";
+import resume from "../assets/Hecker_Resume_2024.pdf";
 
 function Resume() {
   return (
@@ -10,9 +10,9 @@ function Resume() {
       title="Julian Hecker Web Development Resume"
       width="100%"
       style={{
-        display: 'block',
-        height: '100vh',
-        border: 'none',
+        display: "block",
+        height: "100vh",
+        border: "none",
       }}
     ></iframe>
   );

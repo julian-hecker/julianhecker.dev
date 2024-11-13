@@ -40,9 +40,10 @@ const projects = [
     desc: (
       <>
         <p>
-          The idea behind CropBox is to cut out the middlemen of grocery stores
-          and food retailers by letting farmers sell directly to consumers.
+          Website for a small bakery shop selling pastries in the Wake Forest
+          area.
         </p>
+        <p>Site built using NextJS, React, Stripe, and Supabase. </p>
       </>
     ),
     buttons: [

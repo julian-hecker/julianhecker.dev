@@ -8,3 +8,5 @@ export { default as lance } from "./lance.png";
 export { default as paxpaws } from "./paxpaws.png";
 export { default as safe } from "./safe.png";
 export { default as nc } from "./nc.png";
+export { default as pastry } from "./pastry.png";
+export { default as barber } from "./barber.png";

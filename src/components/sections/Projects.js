@@ -5,9 +5,59 @@ import Container from "../../layouts/Container";
 import ProjectCard from "../ProjectCard";
 
 import { link, github, info } from "../../assets/icons";
-import { lance, covid, paxpaws, safe } from "../../images";
+import { lance, covid, paxpaws, safe, barber, pastry } from "../../images";
 
 const projects = [
+  {
+    title: "Barbago",
+    image: barber,
+    desc: (
+      <>
+        <p>
+          Barbago is like Doordash for Barbers. It allows Barbers to work
+          directly in a client's home, avoiding expensive seat rent and
+          providing the most convenient way to cut your hair.
+        </p>
+        <p>Built with React Native, Expo, TypeScript, Firebase</p>
+      </>
+    ),
+    buttons: [
+      {
+        href: "https://barbago.app",
+        icon: link,
+        text: "Demo",
+      },
+      {
+        href: "https://github.com/barbago/barbago",
+        icon: github,
+        text: "Repo",
+      },
+    ],
+  },
+  {
+    title: "Artisan Pastry",
+    image: pastry,
+    desc: (
+      <>
+        <p>
+          The idea behind CropBox is to cut out the middlemen of grocery stores
+          and food retailers by letting farmers sell directly to consumers.
+        </p>
+      </>
+    ),
+    buttons: [
+      {
+        href: "https://artisanpastrync.com",
+        icon: link,
+        text: "Demo",
+      },
+      {
+        href: "https://github.com/artisanpastrync/artisanpastrync.com",
+        icon: github,
+        text: "Repo",
+      },
+    ],
+  },
   {
     image: lance,
     title: "Visionary CEO",
@@ -108,56 +158,6 @@ const projects = [
       //     icon: info,
       //     text: 'More',
       // },
-    ],
-  },
-  {
-    title: "Barbago",
-    image: safe,
-    desc: (
-      <>
-        <p>
-          Barbago is like Doordash for Barbers. It allows Barbers to work
-          directly in a client's home, avoiding expensive seat rent and
-          providing the most convenient way to cut your hair.
-        </p>
-        <p>Built with React Native, Expo, TypeScript, Firebase</p>
-      </>
-    ),
-    buttons: [
-      {
-        href: "https://barbago.app",
-        icon: link,
-        text: "Demo",
-      },
-      {
-        href: "https://github.com/barbago/barbago",
-        icon: github,
-        text: "Repo",
-      },
-    ],
-  },
-  {
-    title: "Artisan Pastry",
-    image: safe,
-    desc: (
-      <>
-        <p>
-          The idea behind CropBox is to cut out the middlemen of grocery stores
-          and food retailers by letting farmers sell directly to consumers.
-        </p>
-      </>
-    ),
-    buttons: [
-      {
-        href: "https://artisanpastrync.com",
-        icon: link,
-        text: "Demo",
-      },
-      {
-        href: "https://github.com/artisanpastrync/artisanpastrync.com",
-        icon: github,
-        text: "Repo",
-      },
     ],
   },
   {

@@ -1,0 +1,38 @@
+.services {
+  padding: 64px 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.heading {
+  font-family: "Roboto Mono", monospace;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.service img {
+  display: block;
+  margin: auto;
+  max-height: 60px;
+  margin-bottom: 32px;
+}
+.service p {
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  gap: 8px;
+  /* // justify-items: center; */
+  place-items: center;
+}
+
+.icon {
+  max-height: 64px;
+}

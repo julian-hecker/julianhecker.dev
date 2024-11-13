@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import s from "./Footer.module.scss";
+import s from "./Footer.module.css";
 import Container from "./Container";
 
 import { github, devpost, twitter, linkedin } from "../assets/icons";

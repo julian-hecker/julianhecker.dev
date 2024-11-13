@@ -1,6 +1,6 @@
 import React from "react";
 
-import s from "./Projects.module.scss";
+import s from "./Projects.module.css";
 import Container from "../../layouts/Container";
 import ProjectCard from "../ProjectCard";
 
@@ -112,6 +112,7 @@ const projects = [
   },
   {
     title: "Barbago",
+    image: safe,
     desc: (
       <>
         <p>
@@ -122,9 +123,22 @@ const projects = [
         <p>Built with React Native, Expo, TypeScript, Firebase</p>
       </>
     ),
+    buttons: [
+      {
+        href: "https://barbago.app",
+        icon: link,
+        text: "Demo",
+      },
+      {
+        href: "https://github.com/barbago/barbago",
+        icon: github,
+        text: "Repo",
+      },
+    ],
   },
   {
-    title: "Cropbox",
+    title: "Artisan Pastry",
+    image: safe,
     desc: (
       <>
         <p>
@@ -133,6 +147,18 @@ const projects = [
         </p>
       </>
     ),
+    buttons: [
+      {
+        href: "https://artisanpastrync.com",
+        icon: link,
+        text: "Demo",
+      },
+      {
+        href: "https://github.com/artisanpastrync/artisanpastrync.com",
+        icon: github,
+        text: "Repo",
+      },
+    ],
   },
   {
     image: safe,

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/index.scss";
+import "../styles/index.css";
 import resume from "../assets/Hecker_Resume_2024.pdf";
 
 function Resume() {

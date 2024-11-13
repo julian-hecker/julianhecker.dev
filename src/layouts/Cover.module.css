@@ -1,0 +1,25 @@
+.cover {
+  padding: 128px 0;
+  background-color: #112233;
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 64px));
+  line-height: 1;
+  text-align: center;
+}
+
+.cover h1 {
+  margin-bottom: 0.5rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 3rem;
+}
+
+.cover p {
+  color: #dddddd;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .cover {
+    padding-top: 160px;
+  }
+}

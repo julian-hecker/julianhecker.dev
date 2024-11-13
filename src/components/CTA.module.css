@@ -1,0 +1,12 @@
+.cta {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.25em;
+  text-decoration: none;
+  transition: opacity 0.25s;
+}
+
+.cta:hover {
+  opacity: 0.75;
+}

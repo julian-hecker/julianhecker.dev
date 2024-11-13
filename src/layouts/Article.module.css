@@ -1,0 +1,12 @@
+.article {
+  padding: 64px 0;
+}
+
+.article p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+}

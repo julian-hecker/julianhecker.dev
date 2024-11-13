@@ -3,7 +3,7 @@ import React from "react";
 import Container from "../../layouts/Container";
 import CTA from "../CTA";
 
-import s from "./Intro.module.scss";
+import s from "./Intro.module.css";
 
 function Intro() {
   return (

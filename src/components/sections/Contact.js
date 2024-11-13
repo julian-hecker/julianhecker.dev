@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "../../layouts/Container";
 
-import s from "./Contact.module.scss";
+import s from "./Contact.module.css";
 import { nc } from "../../images";
 
 // Used for Netlify Form Submission
